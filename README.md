@@ -17,6 +17,7 @@ This is not intended to serve as a comprehensive test automation framework with 
      - Locust does offer distributed load testing (which is a huge plus), where as K6 requires the paid version for this feature. 
      
  **System Requirements:**
+ 
    Python 3.8+
 
    K6 Installed 
