@@ -18,6 +18,9 @@ This is not intended to serve as a comprehensive test automation framework with 
      
  **System Requirements:**
    Python 3.8+
+   K6 Installed 
+      macOS -- $ brew install k6
+      windows -- choco install k6 
    
  **Setting up the project:**
   1. Clone the git repository
@@ -27,3 +30,15 @@ This is not intended to serve as a comprehensive test automation framework with 
 
 **Note to reviewers:** 
 Please start with the "Test-Plan-Password-Hashing-Application-Gregory" file to review test plan and test cases
+
+**Running pytest tests by tag**
+pytest -k smoke
+pytest -k regression
+pytest -k password_hash
+
+**Running pytest tests with html report**
+pytest --html=report.html
+
+**Running k6 tests with html report**
+cd tests/perf_tests
+k6 run test_post_k6.js --out html
