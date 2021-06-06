@@ -14,7 +14,7 @@ This is not intended to serve as a comprehensive test automation framework with 
   - To limit the amount of external dependencies, Locust.io could be added as an additional Python dependency and this could be used instead of K6.
      - Locust also utilizes Pythong for scripting, which is an advantage over introducing JS to this project, but K6 is multithreaded by default where as Locust is not
      - K6 is also written in Go and performs very well
-     - Locust does not offer distributed load testing, where as K6 requires the paid version for this feature. 
+     - Locust does offer distributed load testing (which is a huge plus), where as K6 requires the paid version for this feature. 
      
  **System Requirements:**
    Python 3.8+
