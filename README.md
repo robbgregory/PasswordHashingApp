@@ -16,14 +16,14 @@ This is not intended to serve as a comprehensive test automation framework with 
      - K6 is also written in Go and performs very well
      - Locust does not offer distributed load testing, where as K6 requires the paid version for this feature. 
      
- **System Requirements:
+ **System Requirements:**
    Python 3.8+
    
- **Setting up the project:
+ **Setting up the project:**
   1. Clone the git repository
   2. Navigate to project folder
   3. Install the requirements using: pip install -r requirements.txt
   4. Execute tests using 'pytest' from terminal at project root directory
 
-**Note to reviewers: 
+**Note to reviewers:** 
 Please start with the "Test-Plan-Password-Hashing-Application-Gregory" file to review test plan and test cases
