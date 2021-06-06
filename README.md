@@ -9,7 +9,7 @@ This is not intended to serve as a comprehensive test automation framework with 
   - Some basic test examples and assertions for validation
   - Pytest-xdist which allows for executing tests in parallel from command line
   
-**Other notes on tools:
+**Other notes on tools:**
   - To add in BDD, we could use pytest-bdd as this is a plugin that complements and takes advantage of pytest's list of great features and is not a separate BDD tool like Behave or Lettuce.
   - To limit the amount of external dependencies, Locust.io could be added as an additional Python dependency and this could be used instead of K6.
      - Locust also utilizes Pythong for scripting, which is an advantage over introducing JS to this project, but K6 is multithreaded by default where as Locust is not
