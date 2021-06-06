@@ -24,3 +24,6 @@ Other notes on tools:
   2. Navigate to project folder
   3. Install the requirements using: pip install -r requirements.txt
   4. Execute tests using 'pytest' from terminal at project root directory
+
+Note to reviewers: 
+Please start with the "Test-Plan-Password-Hashing-Application-Gregory" file to review test plan and test cases
