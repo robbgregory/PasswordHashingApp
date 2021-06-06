@@ -1,0 +1,7 @@
+pytest-html==3.1.1
+pytest==6.2.4
+requests==2.25.1
+environs==9.3.2
+jsonschema==3.2.0
+faker==8.5.1
+pytest-xdist==2.2.1
