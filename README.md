@@ -5,7 +5,7 @@ This is not intended to serve as a comprehensive test automation framework with 
   - Use of test fixtures to reduce excessive code, which are stored in conftest.py file
   - Use of pytest.ini file that can list naming conventions for discovering tests for pytest to run, along with markers, which helps with searching and long term project maintenance
   - Use of K6 for performance testing, which is a very light-weight tool that uses JavaScript for scripting but pairs well with other tools like Postman (i.e. Postman collections
-    can easily be converted to K6 scripts with k6-tp-postman converter plugin)
+    can easily be converted to K6 scripts with k6-to-postman converter plugin)
   - Some basic test examples and assertions for validation
   - Pytest-xdist which allows for executing tests in parallel from command line
   
