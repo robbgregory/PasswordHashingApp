@@ -21,6 +21,7 @@ This is not intended to serve as a comprehensive test automation framework with 
    Python 3.8+
 
    K6 Installed 
+
       macOS -- $ brew install k6
       windows -- choco install k6 
    
