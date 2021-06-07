@@ -5,3 +5,4 @@ environs==9.3.2
 jsonschema==3.2.0
 faker==8.5.1
 pytest-xdist==2.2.1
+pytest-reportportal==5.0.8
