@@ -42,6 +42,8 @@ Here I chose to integrate ReportPortal.io by (1) signing up for a demo account (
 
 ReportPortal integrates very well with pytest and considering that the project already uses markers to segment testing, these existing pytest markers can be used as "launches" for ReportPortal. From there it is just a matter of adding widgets to the dashboard. Note: A defect widget would be ideal, but I am unable to pull data in for defects.
 
+Added a PDF version of an example dashboard created for this project.
+
 **Note to reviewers:** 
 Please start with the "Test-Plan-Password-Hashing-Application-Gregory" file to review test plan and test cases
 
