@@ -63,7 +63,7 @@ cd tests/perf_tests
 
 k6 run test_post_k6.js --out html
 
-**Running pytest with reporportal integration**
+**Running pytest with ReportPortal integration**
 
 pytest -m smoke --reportportal
 
