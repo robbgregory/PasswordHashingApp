@@ -10,6 +10,35 @@ import requests  # Requests is an additional dependency needed for using PyTest 
 myFactory = Faker()  # Using the Faker class to create a myFactory object, used to create Faker 'words' for password
 
 
+# The below configurations are used for ReportPortal integration
+# These settings could be added to the pytest.ini file, but adding here in the Conftest.py file
+def pytest_addoption(parser):
+    # Method to add the option to pytest.ini file
+    parser.addini("rp_uuid",'help',type="pathlist")
+    parser.addini("rp_endpoint",'help',type="pathlist")
+    parser.addini("rp_project",'help',type="pathlist")
+    parser.addini("rp_launch",'help',type="pathlist")
+
+@pytest.hookimpl()
+def pytest_configure(config):
+    # Sets the launch name based on the marker selected.
+    # Specific values for report portal come from settings page on ReportPortal
+    suite = config.getoption("markexpr")
+    try:
+        config._inicache["rp_uuid"]="eca258d8-0389-4473-bdf0-b9573cd7f2fc"
+        config._inicache["rp_endpoint"]="https://demo.reportportal.io"
+        config._inicache["rp_project"]="robertg1979_personal"
+        if suite == "password_hash":
+            config._inicache["rp_launch"]="password_hash"
+        elif suite == "smoke":
+            config._inicache["rp_launch"]="smoke"
+        elif suite == "regression":
+            config._inicache["rp_launch"]="regression"
+
+    except Exception as e:  # Capture exception
+        print (str(e))
+
+
 # Define the host URL that will be used as a test fixture
 # Note: URLs can also be captured in separate config file once we have more than one environment
 @pytest.fixture(scope="module")
