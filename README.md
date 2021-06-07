@@ -31,6 +31,17 @@ This is not intended to serve as a comprehensive test automation framework with 
   3. Install the requirements using: pip install -r requirements.txt
   4. Execute tests using 'pytest' from terminal at project root directory
 
+**Dashboard & Reporting:**
+Many teams will use a tool like Jira or Rally for capturing and reporting on test cases and defects, but for this project, the options evaluated were:
+  
+   - ReportPortal.io 
+  
+   - Allure plus InfluxDB and Grafana (could be generated with Docker Compose for simplicity and repeatibility)
+
+Here I chose to integrate ReportPortal.io by (1) signing up for a demo account (https://reportportal.io/), (2) using the configuration details for my ReportPortal.io account with the project conftest.py file, and (3) simply adding the pytest-reportportal dependency to the project (requirements file). 
+
+ReportPortal integrates very well with pytest and considering that the project already uses markers to segment testing, these existing pytest markers can be used as "launches" for ReportPortal. From there it is just a matter of adding widgets to the dashboard. Note: A defect widget would be ideal, but I am unable to pull data in for defects.
+
 **Note to reviewers:** 
 Please start with the "Test-Plan-Password-Hashing-Application-Gregory" file to review test plan and test cases
 
@@ -50,4 +61,11 @@ pytest --html=report.html
 
 cd tests/perf_tests
 
+k6 run test_post_k6.js --out html
+
+**Running pytest with reporportal integration**
+
+pytest -m smoke --reportportal
+
+(Note: "smoke" can be substituted for any valid marker setup in the project with the mark class)
 k6 run test_post_k6.js --out html
